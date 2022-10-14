@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constraint_header"
+        android:background="@color/white_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="@dimen/margin_20"
+        android:paddingBottom="@dimen/margin_20"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/icono" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="60dp"
+            android:id="@+id/divider"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/white_light_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/dashboard"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black_light_border"
+            android:fontFamily="@font/calibri_regular"
+            android:textSize="@dimen/text_size_33"
+            android:layout_marginStart="@dimen/margin_10"
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calendar"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_baseline_calendar"
+                android:textColor="@color/teal_900"
+                android:id="@+id/tv_calendar"
+                android:fontFamily="@font/calibri_bold"
+                android:textSize="@dimen/text_size_32"
+                android:layout_marginStart="@dimen/margin_10"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sync"
+                android:id="@+id/tv_sync"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_baseline_sync"
+                android:textColor="@color/teal_900"
+                android:fontFamily="@font/calibri_bold"
+                android:textSize="@dimen/text_size_32"
+                android:layout_marginStart="@dimen/margin_20"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_ticket"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_baseline_add_24"
+                android:textColor="@color/teal_900"
+                android:fontFamily="@font/calibri_bold"
+                android:textSize="@dimen/text_size_32"
+                android:layout_marginStart="@dimen/margin_10"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/ic_baseline_menu_24"
+                android:textColor="@color/teal_900"
+                android:fontFamily="@font/calibri_bold"
+                android:textSize="@dimen/text_size_32"
+                android:layout_marginStart="@dimen/margin_20"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/calibri_regular"
+        android:background="@color/white_light_date"
+        android:textColor="@color/black_light"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingEnd="@dimen/margin_20"
+        android:textSize="@dimen/text_size_35"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_header"
+        tools:text="Dec 24, 2016" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        tools:listitem="@layout/item_ticket"
+        tools:itemCount="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_date"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

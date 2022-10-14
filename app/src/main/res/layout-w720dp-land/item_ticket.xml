@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/margin_5"
+    card_view:cardElevation="@dimen/margin_5"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardUseCompatPadding="true"
+    card_view:contentPadding="@dimen/margin_2">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/relative_phone_terminal"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_below="@+id/name_terminal"
+        android:layout_alignStart="@+id/name_terminal"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/text_size_30"
+                tools:text="11:35 AM" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textColor="@color/white_light_other"
+                android:textSize="@dimen/text_size_22"
+                tools:text="16/06/91" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_ticket_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:fontFamily="@font/calibri_regular"
+                android:textColor="@color/white_light_other"
+                android:textSize="@dimen/text_size_22"
+                tools:text="Ticket #32787" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:id="@+id/divider"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@color/white_light_other" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/text_size_30"
+                tools:text="Sink Repair" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address_street_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textColor="@color/white_light_other"
+                android:textSize="@dimen/text_size_22"
+                tools:text="37 Greennight Cres" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address_city_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textColor="@color/white_light_other"
+                android:textSize="@dimen/text_size_22"
+                tools:text="Waterloo, On" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address_code_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri_regular"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textColor="@color/white_light_other"
+                android:textSize="@dimen/text_size_22"
+                tools:text="N2R 4K8" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnViewTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_18"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/calibri_regular"
+            android:textSize="@dimen/standard"
+            android:text="@string/view_ticket"
+            android:background="@drawable/background_btn"
+            android:layout_gravity="center_vertical"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.cardview.widget.CardView>

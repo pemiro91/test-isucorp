@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MapFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constraint_header"
+        android:background="@color/white_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_5">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_directions"
+            android:gravity="center_horizontal"
+            android:id="@+id/tv_work_ticket"
+            android:textColor="@color/white_light_other"
+            android:fontFamily="@font/calibri_bold"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticket_back"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/ic_baseline_keyboard_arrow_left"
+            android:textColor="@color/teal_900"
+            android:fontFamily="@font/calibri_bold"
+            android:textSize="@dimen/text_size_18"
+            android:id="@+id/backTicket"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_work_ticket"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_work_ticket"
+            android:layout_marginStart="@dimen/margin_10"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tab_menu"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_header" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_menu"
+        app:tabPaddingStart="10dp"
+        app:tabPaddingEnd="10dp"
+        style="@style/AppTheme.TabLayout"
+        app:tabIndicatorColor="@color/teal_900"
+        app:tabSelectedTextColor="@color/teal_900"
+        app:tabTextColor="@color/white_light_other"
+        app:tabIndicatorGravity="top"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_details"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/purchasing"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finishing_up"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_camera_alt"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
